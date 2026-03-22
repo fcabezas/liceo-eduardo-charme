@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, Search } from "lucide-react";
 import Section from "@/components/ui/Section";
@@ -93,7 +94,18 @@ export default function NoticiasPage() {
                 transition={{ delay: index * 0.05 }}
               >
                 <Card className="h-full">
-                  <ImagePlaceholder alt={news.title} aspectRatio="video" />
+                  {news.image && !news.image.includes("placeholder") ? (
+                    <div className="relative aspect-video">
+                      <Image
+                        src={news.image}
+                        alt={news.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder alt={news.title} aspectRatio="video" />
+                  )}
                   <CardContent>
                     <div className="flex items-center gap-2 mb-3">
                       <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">

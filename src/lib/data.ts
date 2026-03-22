@@ -168,12 +168,12 @@ export const talleres = [
 export const newsItems = [
   {
     id: 1,
-    title: "Ceremonia de Inicio Año Escolar 2026",
+    title: "Acto de Inicio Año Escolar 2026",
     excerpt:
       "Con gran entusiasmo damos la bienvenida a nuestros estudiantes en este nuevo año académico, reafirmando nuestro compromiso con la excelencia educativa.",
     category: "Institucional",
-    date: "2026-03-02",
-    image: "/images/placeholder-news-1.jpg",
+    date: "2026-03-04",
+    image: "/images/noticia-inicio-escolar.jpg",
   },
   {
     id: 2,

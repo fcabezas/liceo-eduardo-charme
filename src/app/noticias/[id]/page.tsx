@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import Section from "@/components/ui/Section";
@@ -66,10 +67,18 @@ export default function NoticiaDetailPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <ImagePlaceholder
-                alt={news.title}
-                aspectRatio="video"
-              />
+              {news.image && !news.image.includes("placeholder") ? (
+                <div className="relative aspect-video rounded-2xl overflow-hidden">
+                  <Image
+                    src={news.image}
+                    alt={news.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder alt={news.title} aspectRatio="video" />
+              )}
               <div className="mt-8">
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {news.excerpt}
