@@ -57,8 +57,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-4">
               121 años formando profesionales con excelencia humana y académica.
-              Educación Técnico Profesional y Científico Humanista al servicio de
-              la comunidad.
+              Educación Técnico Profesional al servicio de la comunidad.
             </p>
             <div className="flex items-center gap-3">
               <a

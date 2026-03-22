@@ -70,8 +70,7 @@ export default function QuienesSomosPage() {
                 de profesionales que se han destacado en distintos ámbitos del
                 quehacer nacional. Hoy, como establecimiento dependiente del SLEP
                 Colchagua, continuamos nuestro compromiso con la excelencia
-                educativa, ofreciendo formación Científico Humanista y Técnico
-                Profesional.
+                educativa, ofreciendo formación Técnico Profesional de excelencia.
               </p>
             </div>
             <div className="relative aspect-video rounded-2xl overflow-hidden">

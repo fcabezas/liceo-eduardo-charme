@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     template: "%s | Liceo Eduardo Charme",
   },
   description:
-    "Liceo de Educación Media Técnico Profesional y Científico Humanista en San Fernando, Región de O'Higgins. 121 años formando profesionales con excelencia humana y académica. Especialidades: Administración, Enfermería, Programación y Turismo.",
+    "Liceo de Educación Media Técnico Profesional en San Fernando, Región de O'Higgins. 121 años formando profesionales con excelencia humana y académica. Especialidades: Administración, Enfermería, Programación y Turismo.",
   keywords: [
     "Liceo Eduardo Charme",
     "San Fernando",
     "educación técnico profesional",
-    "científico humanista",
+    "liceo técnico profesional",
     "SLEP Colchagua",
     "liceo San Fernando",
     "educación media",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     siteName: "Liceo Eduardo Charme",
     title: "Liceo Eduardo Charme | San Fernando, Chile",
     description:
-      "121 años formando profesionales. Educación Técnico Profesional y Científico Humanista en San Fernando.",
+      "121 años formando profesionales. Educación Técnico Profesional en San Fernando.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Liceo Eduardo Charme",
     description:
-      "121 años formando profesionales. Educación TP y CH en San Fernando.",
+      "121 años formando profesionales. Educación Técnico Profesional en San Fernando.",
   },
   robots: {
     index: true,

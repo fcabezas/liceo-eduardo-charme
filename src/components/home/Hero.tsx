@@ -32,7 +32,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-gold/20 text-gold-light px-4 py-2 rounded-full text-sm font-medium mb-6">
               <GraduationCap size={16} />
-              Educación TP y Científico Humanista
+              Educación Técnico Profesional
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -98,9 +98,9 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">
-                      Formación Científico Humanista
+                      Formación Técnico Profesional
                     </h3>
-                    <p className="text-sm text-blue-200">1° a 4° Medio</p>
+                    <p className="text-sm text-blue-200">4 especialidades</p>
                   </div>
                 </div>
               </div>

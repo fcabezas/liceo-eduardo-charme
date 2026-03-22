@@ -47,8 +47,8 @@ export default function OfertaAcademicaPage() {
               Oferta Académica
             </h1>
             <p className="text-lg text-blue-200 max-w-2xl">
-              Educación integral que combina formación Científico Humanista y
-              Técnico Profesional para preparar a nuestros estudiantes.
+              Educación Técnico Profesional integral para preparar a nuestros
+              estudiantes para el mundo laboral y la continuidad de estudios.
             </p>
           </motion.div>
         </div>
@@ -56,102 +56,56 @@ export default function OfertaAcademicaPage() {
 
       {/* Modalidades */}
       <Section
-        title="Modalidades de Enseñanza"
-        subtitle="Dos caminos de formación para el futuro de nuestros estudiantes"
+        title="Nuestra Modalidad"
+        subtitle="Formación Técnico Profesional para el futuro de nuestros estudiantes"
       >
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="h-full">
+            <Card className="border-2 border-gold/30">
               <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6">
-                  <BookOpen size={32} className="text-secondary" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center">
+                    <GraduationCap size={32} className="text-gold-dark" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Educación Técnico Profesional
+                    </h3>
+                    <span className="inline-block px-3 py-1 rounded-full bg-gold/10 text-gold-dark text-sm font-medium">
+                      1° a 4° Medio
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Científico Humanista
-                </h3>
-                <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-4">
-                  1° a 4° Medio
-                </span>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Formación general que prepara a los estudiantes para continuar
-                  estudios superiores en universidades, institutos profesionales o
-                  centros de formación técnica. Los estudiantes reciben una base
-                  sólida en ciencias, humanidades, matemáticas, lenguaje e idiomas.
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Nuestro liceo ofrece formación Técnico Profesional que prepara a los
+                  estudiantes para insertarse al mundo laboral con competencias técnicas
+                  sólidas, además de poder continuar estudios superiores. En 1° y 2° Medio
+                  los estudiantes reciben formación general, y a partir de 3° Medio eligen
+                  una de nuestras 4 especialidades. La formación incluye práctica profesional
+                  obligatoria.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                    Lenguaje y Comunicación
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                    Matemáticas
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                    Ciencias (Biología, Física, Química)
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                    Historia y Ciencias Sociales
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                    Inglés
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                    Educación Física y Artes
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <Card className="h-full border-2 border-gold/30">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6">
-                  <GraduationCap size={32} className="text-gold-dark" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Técnico Profesional
-                </h3>
-                <span className="inline-block px-3 py-1 rounded-full bg-gold/10 text-gold-dark text-sm font-medium mb-4">
-                  3° y 4° Medio
-                </span>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Formación especializada que prepara a los estudiantes para
-                  insertarse al mundo laboral con competencias técnicas, además
-                  de poder continuar estudios superiores. Incluye práctica
-                  profesional obligatoria.
-                </p>
-                <div className="space-y-2 text-sm text-gray-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    Administración mención RRHH
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    Atención de Enfermería
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    Programación
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    Servicios de Turismo
-                  </li>
+                <h4 className="font-semibold text-gray-900 mb-3">Nuestras 4 especialidades:</h4>
+                <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-gold/5">
+                    <div className="w-2 h-2 rounded-full bg-gold" />
+                    <span className="text-gray-700 font-medium">Administración mención RRHH</span>
+                  </div>
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-gold/5">
+                    <div className="w-2 h-2 rounded-full bg-gold" />
+                    <span className="text-gray-700 font-medium">Atención de Enfermería</span>
+                  </div>
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-gold/5">
+                    <div className="w-2 h-2 rounded-full bg-gold" />
+                    <span className="text-gray-700 font-medium">Programación</span>
+                  </div>
+                  <div className="flex items-center gap-2 p-3 rounded-lg bg-gold/5">
+                    <div className="w-2 h-2 rounded-full bg-gold" />
+                    <span className="text-gray-700 font-medium">Servicios de Turismo</span>
+                  </div>
                 </div>
                 <Link
                   href="/especialidades"

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Liceo Eduardo Charme",
   description:
-    "Liceo de Educación Media Técnico Profesional y Científico Humanista en San Fernando, Chile. 121 años formando profesionales.",
+    "Liceo de Educación Media Técnico Profesional en San Fernando, Chile. 121 años formando profesionales.",
   url: "https://liceoeduardocharme.cl",
   address: "Argomedo 485, San Fernando, Región de O'Higgins, Chile",
   phone: "+56 9 5813 7970",
