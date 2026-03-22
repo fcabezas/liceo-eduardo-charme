@@ -27,10 +27,7 @@ const tallerIcons: Record<string, React.ElementType> = {
   "Básquetbol": Dumbbell,
   "Música y grupo instrumental": Music,
   "Radio escolar": Radio,
-  "Yoga": Dumbbell,
   "Banda de guerra": Swords,
-  "Folklore": Music,
-  "Taller de filosofía": Brain,
 };
 
 export default function OfertaAcademicaPage() {

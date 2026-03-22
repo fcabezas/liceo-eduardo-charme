@@ -70,6 +70,7 @@ export default function NoticiasPage() {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
+                aria-pressed={activeCategory === category}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   activeCategory === category
                     ? "bg-primary text-white"

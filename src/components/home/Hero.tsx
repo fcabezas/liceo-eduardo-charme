@@ -98,9 +98,9 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">
-                      Práctica Profesional
+                      Título Técnico de Nivel Medio
                     </h3>
-                    <p className="text-sm text-blue-200">Inserción laboral garantizada</p>
+                    <p className="text-sm text-blue-200">Reconocido por MINEDUC</p>
                   </div>
                 </div>
               </div>
@@ -112,10 +112,10 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">
-                      Técnico Profesional
+                      Práctica Profesional
                     </h3>
                     <p className="text-sm text-blue-200">
-                      4 especialidades en 3° y 4° Medio
+                      Inserción laboral en empresas del rubro
                     </p>
                   </div>
                 </div>
@@ -128,10 +128,10 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">
-                      Comunidad inclusiva
+                      Educación 100% gratuita
                     </h3>
                     <p className="text-sm text-blue-200">
-                      Formación integral y valores
+                      Liceo público SLEP Colchagua
                     </p>
                   </div>
                 </div>
