@@ -177,9 +177,9 @@ export const newsItems = [
   },
   {
     id: 2,
-    title: "Estudiantes de Programación ganan hackathon regional",
+    title: "Liceo Eduardo Charme se integra a la Red para la Innovación en Evaluación de la Universidad de Chile",
     excerpt:
-      "Nuestros alumnos de la especialidad de Programación obtuvieron el primer lugar en la competencia regional de desarrollo de software.",
+      "Nuestro liceo fue seleccionado para formar parte de la Red de Establecimientos para la Innovación en Evaluación, liderada por la Universidad de Chile. Esta iniciativa impulsa la transformación de las prácticas evaluativas hacia un enfoque de Evaluación para el Aprendizaje (EpA), priorizando la retroalimentación formativa, la diversificación de instrumentos y el desarrollo de la metacognición en nuestros estudiantes. Con este paso, el Liceo Eduardo Charme reafirma su compromiso con la innovación pedagógica y el mejoramiento continuo de la educación pública en la Región de O'Higgins.",
     category: "Académico",
     date: "2026-03-15",
     image: "/images/placeholder-news-2.jpg",
