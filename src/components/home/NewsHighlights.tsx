@@ -5,13 +5,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import Card, { CardContent } from "@/components/ui/Card";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Section from "@/components/ui/Section";
 import { newsItems } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
 export default function NewsHighlights() {
-  const latestNews = newsItems.slice(0, 3);
+  const latestNews = [...newsItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
   return (
     <Section
@@ -29,7 +28,7 @@ export default function NewsHighlights() {
             transition={{ delay: index * 0.1 }}
           >
             <Card>
-              {news.image && !news.image.includes("placeholder") ? (
+              {news.image && (
                 <div className="relative aspect-video">
                   <Image
                     src={news.image}
@@ -38,8 +37,6 @@ export default function NewsHighlights() {
                     className="object-cover rounded-t-2xl"
                   />
                 </div>
-              ) : (
-                <ImagePlaceholder alt={news.title} aspectRatio="video" />
               )}
               <CardContent>
                 <div className="flex items-center gap-2 mb-3">

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ClipboardList,
@@ -9,7 +8,8 @@ import {
   ExternalLink,
   CheckCircle,
   AlertCircle,
-  Send,
+  MessageCircle,
+  Mail,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Card, { CardContent } from "@/components/ui/Card";
@@ -17,30 +17,6 @@ import Accordion from "@/components/ui/Accordion";
 import { faqItems } from "@/lib/data";
 
 export default function AdmisionPage() {
-  const [formData, setFormData] = useState({
-    studentName: "",
-    parentName: "",
-    email: "",
-    phone: "",
-    currentLevel: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({
-      studentName: "",
-      parentName: "",
-      email: "",
-      phone: "",
-      currentLevel: "",
-      message: "",
-    });
-  };
-
   return (
     <>
       {/* Hero */}
@@ -179,128 +155,31 @@ export default function AdmisionPage() {
         </div>
       </Section>
 
-      {/* Formulario de consulta */}
+      {/* CTA Consultas */}
       <Section
-        title="Formulario de Consulta"
-        subtitle="¿Tienes dudas sobre el proceso de admisión? Escríbenos"
+        title="¿Tienes dudas?"
+        subtitle="Contáctanos directamente para resolver tus consultas sobre admisión"
         className="bg-gray-50"
       >
-        <div className="max-w-2xl mx-auto">
-          {submitted && (
-            <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
-              <CheckCircle size={20} className="text-emerald-500" />
-              <p className="text-emerald-700 font-medium">
-                ¡Consulta enviada con éxito! Te responderemos a la brevedad.
-              </p>
-            </div>
-          )}
-
-          <Card>
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Nombre del estudiante *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.studentName}
-                      onChange={(e) =>
-                        setFormData({ ...formData, studentName: e.target.value })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Nombre del apoderado *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.parentName}
-                      onChange={(e) =>
-                        setFormData({ ...formData, parentName: e.target.value })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Teléfono
-                    </label>
-                    <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Nivel al que postula
-                  </label>
-                  <select
-                    value={formData.currentLevel}
-                    onChange={(e) =>
-                      setFormData({ ...formData, currentLevel: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                  >
-                    <option value="">Selecciona un nivel</option>
-                    <option value="1-medio">1° Medio</option>
-                    <option value="2-medio">2° Medio</option>
-                    <option value="3-medio">3° Medio</option>
-                    <option value="4-medio">4° Medio</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Mensaje *
-                  </label>
-                  <textarea
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
-                    placeholder="Escribe tu consulta sobre el proceso de admisión..."
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary gap-2 w-full sm:w-auto">
-                  <Send size={16} />
-                  Enviar consulta
-                </button>
-              </form>
-            </CardContent>
-          </Card>
+        <div className="max-w-xl mx-auto text-center">
+          <div className="grid sm:grid-cols-2 gap-4">
+            <a
+              href={`https://wa.me/56958137970?text=${encodeURIComponent("Hola, tengo una consulta sobre admisión al Liceo Eduardo Charme.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 p-5 bg-[#25D366]/10 border-2 border-[#25D366]/30 rounded-2xl hover:bg-[#25D366]/20 transition-all font-semibold text-gray-900"
+            >
+              <MessageCircle size={22} className="text-[#25D366]" />
+              WhatsApp
+            </a>
+            <a
+              href="mailto:ledocharme@yahoo.es?subject=Consulta%20Admisión%20Liceo%20Eduardo%20Charme"
+              className="flex items-center justify-center gap-3 p-5 bg-primary/5 border-2 border-primary/20 rounded-2xl hover:bg-primary/10 transition-all font-semibold text-gray-900"
+            >
+              <Mail size={22} className="text-primary" />
+              Email
+            </a>
+          </div>
         </div>
       </Section>
 

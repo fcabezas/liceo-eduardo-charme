@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Calendar, Search } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Card, { CardContent } from "@/components/ui/Card";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { newsItems } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
@@ -17,7 +16,8 @@ export default function NoticiasPage() {
   const [activeCategory, setActiveCategory] = useState("Todas");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredNews = newsItems.filter((news) => {
+  const sortedNews = [...newsItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const filteredNews = sortedNews.filter((news) => {
     const matchesCategory =
       activeCategory === "Todas" || news.category === activeCategory;
     const matchesSearch =
@@ -94,7 +94,7 @@ export default function NoticiasPage() {
                 transition={{ delay: index * 0.05 }}
               >
                 <Card className="h-full">
-                  {news.image && !news.image.includes("placeholder") ? (
+                  {news.image && (
                     <div className="relative aspect-video">
                       <Image
                         src={news.image}
@@ -103,8 +103,6 @@ export default function NoticiasPage() {
                         className="object-cover"
                       />
                     </div>
-                  ) : (
-                    <ImagePlaceholder alt={news.title} aspectRatio="video" />
                   )}
                   <CardContent>
                     <div className="flex items-center gap-2 mb-3">

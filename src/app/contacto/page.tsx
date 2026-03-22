@@ -7,7 +7,7 @@ import {
   Mail,
   Clock,
   Instagram,
-  Twitter,
+  Facebook,
   MessageCircle,
 } from "lucide-react";
 import Section from "@/components/ui/Section";
@@ -146,7 +146,7 @@ export default function ContactoPage() {
         <div className="max-w-5xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.8!2d-70.9897!3d-34.5847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966413e5e1b5c7c1%3A0x5e0f1f5c5e0f1f5c!2sArgomedo%20485%2C%20San%20Fernando%2C%20O&#39;Higgins!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1635.5!2d-70.9897!3d-34.5839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966413d8e8e8e8e1%3A0x1234567890abcdef!2sLiceo%20Eduardo%20Charme!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl"
               width="100%"
               height="450"
               style={{ border: 0 }}

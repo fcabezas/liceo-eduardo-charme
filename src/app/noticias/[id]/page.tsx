@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import Section from "@/components/ui/Section";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import { newsItems } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
@@ -67,7 +66,7 @@ export default function NoticiaDetailPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              {news.image && !news.image.includes("placeholder") ? (
+              {news.image && (
                 <div className="relative aspect-video rounded-2xl overflow-hidden">
                   <Image
                     src={news.image}
@@ -76,8 +75,6 @@ export default function NoticiaDetailPage() {
                     className="object-cover"
                   />
                 </div>
-              ) : (
-                <ImagePlaceholder alt={news.title} aspectRatio="video" />
               )}
               <div className="mt-8">
                 <p className="text-lg text-gray-600 leading-relaxed">
