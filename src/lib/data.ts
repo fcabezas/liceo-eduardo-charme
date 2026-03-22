@@ -201,6 +201,15 @@ export const newsItems = [
     date: "2026-03-20",
     image: "/images/noticia-inclusion.jpg",
   },
+  {
+    id: 5,
+    title: "Primera reunión de apoderados 2026 en el Liceo Eduardo Charme",
+    excerpt:
+      "El Liceo Eduardo Charme realizó la primera reunión general de apoderados del año escolar 2026, instancia en la que el equipo directivo dio la bienvenida a las familias y presentó las principales orientaciones para el presente período académico. Durante la jornada se abordaron temas clave como la nueva ley que prohíbe el uso de teléfonos celulares en la sala de clases, normativa que busca mejorar la concentración, reducir las distracciones y fortalecer la convivencia dentro del aula. El equipo de Inspectoría General entregó información sobre horarios, asistencia, puntualidad y protocolos internos del establecimiento. Por su parte, la Unidad Técnico Pedagógica (UTP) compartió las líneas de trabajo académico del año, incluyendo los planes de evaluación y el acompañamiento pedagógico a los estudiantes. Finalmente, el área de Orientación presentó los programas de apoyo socioemocional, prevención y acompañamiento disponibles para los estudiantes y sus familias. Esta reunión reforzó el vínculo entre el liceo y los apoderados, pieza fundamental para el éxito del proceso educativo en San Fernando y la Región de O'Higgins.",
+    category: "Institucional",
+    date: "2026-03-17",
+    image: "/images/noticia-reunion-apoderados.jpg",
+  },
 ];
 
 export const documents = [
