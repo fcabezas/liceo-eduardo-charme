@@ -3,8 +3,6 @@
 import { useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import ImagePlaceholder from "./ImagePlaceholder";
-
 interface LightboxProps {
   isOpen: boolean;
   onClose: () => void;
@@ -62,11 +60,11 @@ export default function Lightbox({
               <X size={28} />
             </button>
 
-            <div className="relative rounded-xl overflow-hidden bg-gray-900">
-              <ImagePlaceholder
+            <div className="relative rounded-xl overflow-hidden bg-gray-900 flex items-center justify-center">
+              <img
+                src={images[currentIndex]?.src || ""}
                 alt={images[currentIndex]?.alt || ""}
-                aspectRatio="video"
-                className="w-full"
+                className="max-w-full max-h-[80vh] object-contain"
               />
             </div>
 

@@ -3,7 +3,6 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
-import ImagePlaceholder from "@/components/ui/ImagePlaceholder";
 import Lightbox from "@/components/ui/Lightbox";
 import { galleryImages } from "@/lib/data";
 
@@ -90,11 +89,12 @@ export default function GaleriaPage() {
               className="cursor-pointer group"
               onClick={() => openLightbox(index)}
             >
-              <div className="relative rounded-xl overflow-hidden">
-                <ImagePlaceholder
+              <div className="relative rounded-xl overflow-hidden aspect-square">
+                <img
+                  src={image.src}
                   alt={image.alt}
-                  aspectRatio="square"
-                  className="group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
                   <p className="text-white text-xs p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
