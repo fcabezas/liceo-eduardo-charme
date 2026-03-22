@@ -123,7 +123,7 @@ export default function ContactoPage() {
                     rel="noopener noreferrer"
                     className="text-sm text-gray-600 hover:text-primary transition-colors"
                   >
-                    @liceo.eduardocharme
+                    @liceocharme
                   </a>
                   <span className="text-gray-300">|</span>
                   <a

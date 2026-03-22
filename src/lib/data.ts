@@ -11,7 +11,7 @@ export const siteConfig = {
   director: "Oscar Muñoz Yáñez",
   founded: 1905,
   social: {
-    instagram: "https://instagram.com/liceo.eduardocharme",
+    instagram: "https://instagram.com/liceocharme",
     twitter: "https://twitter.com/liceoech",
   },
 };
