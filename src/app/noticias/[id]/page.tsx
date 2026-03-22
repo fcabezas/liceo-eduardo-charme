@@ -84,6 +84,19 @@ export default function NoticiaDetailPage() {
                   {news.excerpt}
                 </p>
               </div>
+              {news.youtube && (
+                <div className="mt-8">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${news.youtube.split("v=")[1]?.split("&")[0]}`}
+                      title={news.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="lg:col-span-1">

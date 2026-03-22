@@ -183,6 +183,7 @@ export const newsItems = [
     category: "Académico",
     date: "2026-03-15",
     image: "/images/noticia-red-evaluacion.jpg",
+    youtube: "https://www.youtube.com/watch?v=oRGIJws7gWA",
   },
   {
     id: 3,
