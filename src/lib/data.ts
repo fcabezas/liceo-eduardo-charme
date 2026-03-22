@@ -186,12 +186,12 @@ export const newsItems = [
   },
   {
     id: 3,
-    title: "Torneo deportivo interescolar de vóleibol",
+    title: "Inicio de entrenamientos de vóleibol 2026: invitación abierta para estudiantes del Liceo Eduardo Charme",
     excerpt:
-      "El equipo de vóleibol damas representará al liceo en el campeonato regional tras clasificar en primer lugar del torneo comunal.",
+      "El Liceo Eduardo Charme da inicio a los entrenamientos de vóleibol del año 2026, con una invitación abierta a todos los estudiantes que quieran sumarse a esta disciplina deportiva. Las sesiones se realizarán los días lunes, martes y jueves de 16:00 a 18:00 horas en las instalaciones del liceo. No se requiere experiencia previa: el objetivo es fomentar la actividad física, el trabajo en equipo y la vida saludable entre nuestros jóvenes. El deporte es un pilar fundamental en la formación integral que promueve nuestro establecimiento, contribuyendo al bienestar emocional, la disciplina personal y la sana convivencia escolar. Invitamos a todas y todos los estudiantes interesados a acercarse al departamento de Educación Física para inscribirse. ¡Los esperamos en la cancha!",
     category: "Deportes",
     date: "2026-03-18",
-    image: "/images/placeholder-news-3.jpg",
+    image: "/images/noticia-voleibol.jpg",
   },
   {
     id: 4,
