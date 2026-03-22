@@ -98,9 +98,9 @@ export default function Hero() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">
-                      Formación Técnico Profesional
+                      Práctica Profesional
                     </h3>
-                    <p className="text-sm text-blue-200">4 especialidades</p>
+                    <p className="text-sm text-blue-200">Inserción laboral garantizada</p>
                   </div>
                 </div>
               </div>
