@@ -192,33 +192,6 @@ export const newsItems = [
     date: "2026-03-18",
     image: "/images/noticia-voleibol.jpg",
   },
-  {
-    id: 4,
-    title: "Feria de Especialidades Técnico Profesionales",
-    excerpt:
-      "Invitamos a toda la comunidad a conocer las especialidades que ofrece nuestro liceo en la feria anual de carreras TP.",
-    category: "Académico",
-    date: "2026-03-10",
-    image: "/images/placeholder-news-4.jpg",
-  },
-  {
-    id: 5,
-    title: "Taller de primeros auxilios para estudiantes de enfermería",
-    excerpt:
-      "Estudiantes de la especialidad de Enfermería participaron en un taller práctico de primeros auxilios junto al CESFAM local.",
-    category: "Académico",
-    date: "2026-03-08",
-    image: "/images/placeholder-news-5.jpg",
-  },
-  {
-    id: 6,
-    title: "Festival cultural por aniversario del liceo",
-    excerpt:
-      "Celebramos 121 años de historia con presentaciones artísticas, música y la participación de toda la comunidad educativa.",
-    category: "Cultural",
-    date: "2026-03-20",
-    image: "/images/placeholder-news-6.jpg",
-  },
 ];
 
 export const documents = [
