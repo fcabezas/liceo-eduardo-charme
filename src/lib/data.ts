@@ -231,6 +231,7 @@ export const documents = [
     fileType: "PDF",
     size: "1.8 MB",
     date: "2025-12-01",
+    downloadUrl: "/docs/reglamento-interno.pdf",
   },
   {
     id: 3,
@@ -241,6 +242,7 @@ export const documents = [
     fileType: "PDF",
     size: "980 KB",
     date: "2025-12-01",
+    downloadUrl: "/docs/reglamento-de-evaluacion.pdf",
   },
   {
     id: 4,

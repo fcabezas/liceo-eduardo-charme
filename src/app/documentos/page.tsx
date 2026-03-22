@@ -91,10 +91,21 @@ export default function DocumentosPage() {
                           {formatDate(doc.date)}
                         </span>
                       </div>
-                      <span className="inline-flex items-center gap-2 text-sm font-medium text-gray-400">
-                        <Download size={16} />
-                        Próximamente
-                      </span>
+                      {doc.downloadUrl ? (
+                        <a
+                          href={doc.downloadUrl}
+                          download
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-light transition-colors"
+                        >
+                          <Download size={16} />
+                          Descargar PDF
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center gap-2 text-sm font-medium text-gray-400">
+                          <Download size={16} />
+                          Próximamente
+                        </span>
+                      )}
                     </div>
                   </div>
                 </CardContent>
