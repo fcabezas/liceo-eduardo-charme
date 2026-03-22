@@ -83,9 +83,6 @@ export default function NoticiaDetailPage() {
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {news.excerpt}
                 </p>
-                <p className="text-gray-600 leading-relaxed mt-4">
-                  El contenido completo de esta noticia estará disponible próximamente.
-                </p>
               </div>
             </div>
 
