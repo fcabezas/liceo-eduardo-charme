@@ -12,7 +12,7 @@ export const siteConfig = {
   founded: 1905,
   social: {
     instagram: "https://instagram.com/liceocharme",
-    twitter: "https://twitter.com/liceoech",
+    facebook: "https://www.facebook.com/liceo.eduardo.charme.2025",
   },
 };
 

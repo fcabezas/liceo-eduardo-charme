@@ -8,7 +8,7 @@ import {
   Mail,
   Clock,
   Instagram,
-  Twitter,
+  Facebook,
   ArrowUp,
 } from "lucide-react";
 import { siteConfig } from "@/lib/data";
@@ -71,13 +71,13 @@ export default function Footer() {
                 <Instagram size={16} />
               </a>
               <a
-                href={siteConfig.social.twitter}
+                href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Twitter"
+                aria-label="Facebook"
               >
-                <Twitter size={16} />
+                <Facebook size={16} />
               </a>
             </div>
           </div>

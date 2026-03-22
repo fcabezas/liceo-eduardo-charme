@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@liceoech",
     title: "Liceo Eduardo Charme",
     description:
       "121 años formando profesionales. Educación TP y CH en San Fernando.",

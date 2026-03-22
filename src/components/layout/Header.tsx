@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail, Instagram, Twitter } from "lucide-react";
+import { Menu, X, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -60,13 +60,13 @@ export default function Header() {
                 <Instagram size={16} />
               </a>
               <a
-                href={siteConfig.social.twitter}
+                href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gold-light transition-colors"
-                aria-label="Twitter"
+                aria-label="Facebook"
               >
-                <Twitter size={16} />
+                <Facebook size={16} />
               </a>
             </div>
           </div>

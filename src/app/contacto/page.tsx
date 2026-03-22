@@ -127,12 +127,12 @@ export default function ContactoPage() {
                   </a>
                   <span className="text-gray-300">|</span>
                   <a
-                    href={siteConfig.social.twitter}
+                    href={siteConfig.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-gray-600 hover:text-primary transition-colors"
                   >
-                    @liceoech
+                    Facebook
                   </a>
                 </div>
               </div>
