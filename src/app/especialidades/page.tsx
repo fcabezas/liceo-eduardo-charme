@@ -168,8 +168,7 @@ export default function EspecialidadesPage() {
                       Requisitos de ingreso
                     </h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Haber cursado 2° Medio en el liceo</li>
-                      <li>• Postulación interna durante 2° Medio</li>
+                      <li>• Postulación durante 2° Medio</li>
                       <li>• Entrevista de orientación vocacional</li>
                     </ul>
                   </div>
