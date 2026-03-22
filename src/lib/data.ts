@@ -159,10 +159,8 @@ export const talleres = [
   "Básquetbol",
   "Música y grupo instrumental",
   "Radio escolar",
-  "Yoga",
   "Banda de guerra",
-  "Folklore",
-  "Taller de filosofía",
+  "Otros: por confirmar",
 ];
 
 export const newsItems = [

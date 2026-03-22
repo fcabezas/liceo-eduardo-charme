@@ -174,7 +174,7 @@ export default function OfertaAcademicaPage() {
 
       {/* Talleres */}
       <Section
-        title="Talleres Extraprogramáticos"
+        title="Talleres"
         subtitle="Actividades complementarias para el desarrollo integral de nuestros estudiantes"
       >
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
