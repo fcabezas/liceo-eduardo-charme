@@ -182,7 +182,7 @@ export const newsItems = [
       "El Liceo Eduardo Charme se incorporó oficialmente a la Red de Establecimientos para la Innovación en Evaluación, iniciativa liderada por el Departamento de Estudios Pedagógicos de la Universidad de Chile y coordinada por la académica Teresa Flórez. Esta red reúne a más de 50 establecimientos a lo largo del país que trabajan en la transformación de sus culturas evaluativas, transitando desde la calificación numérica tradicional hacia un modelo de Evaluación para el Aprendizaje (EpA). Con esta incorporación, nuestro liceo comenzará a implementar prácticas como la retroalimentación formativa descriptiva, la diversificación de instrumentos de evaluación —incluyendo portafolios, proyectos y rúbricas—, y el fortalecimiento de la autoevaluación y coevaluación entre estudiantes. El objetivo es potenciar el aprendizaje profundo, la motivación intrínseca y el respeto por los distintos ritmos de aprendizaje de cada estudiante. Este hito refuerza el compromiso del Liceo Eduardo Charme con la innovación pedagógica y el mejoramiento continuo de la educación pública en San Fernando y la Región de O'Higgins.",
     category: "Académico",
     date: "2026-03-15",
-    image: "/images/placeholder-news-2.jpg",
+    image: "/images/noticia-red-evaluacion.jpg",
   },
   {
     id: 3,
