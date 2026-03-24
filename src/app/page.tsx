@@ -4,6 +4,7 @@ import SpecialtiesPreview from "@/components/home/SpecialtiesPreview";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import MissionVision from "@/components/home/MissionVision";
 import NewsHighlights from "@/components/home/NewsHighlights";
+import Testimonials from "@/components/home/Testimonials";
 import Partners from "@/components/home/Partners";
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <MissionVision />
       <NewsHighlights />
+      <Testimonials />
       <Partners />
     </>
   );

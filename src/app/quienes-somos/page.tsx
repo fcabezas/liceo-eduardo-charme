@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Card, { CardContent } from "@/components/ui/Card";
-import { sealItems, values, teamMembers } from "@/lib/data";
+import { sealItems, values, teamMembers, organizationGroups } from "@/lib/data";
 
 const iconMap: Record<string, React.ElementType> = {
   Users,
@@ -259,6 +259,52 @@ export default function QuienesSomosPage() {
                   <p className="text-sm text-primary font-medium">{member.role}</p>
                 </CardContent>
               </Card>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Organización completa */}
+      <Section
+        title="Nuestra Comunidad Educativa"
+        subtitle="Todos los integrantes que hacen posible la labor educativa del liceo"
+        className="bg-gray-50"
+      >
+        <div className="max-w-5xl mx-auto space-y-10">
+          {organizationGroups.filter(g => g.title !== "Equipo Directivo").map((group, groupIndex) => (
+            <motion.div
+              key={group.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: groupIndex * 0.1 }}
+            >
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <div className="w-1.5 h-6 rounded-full bg-primary" />
+                {group.title}
+              </h3>
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                {group.members.map((member, memberIndex) => (
+                  <div
+                    key={`${group.title}-${memberIndex}`}
+                    className="bg-white rounded-xl p-4 border border-gray-100 hover:border-primary/20 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <Users size={16} className="text-primary/50" />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-medium text-gray-900 text-sm truncate">
+                          {member.name}
+                        </p>
+                        <p className="text-xs text-gray-500 truncate">
+                          {member.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>

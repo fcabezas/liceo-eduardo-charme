@@ -477,3 +477,78 @@ export const teamMembers = [
     image: "/images/placeholder-team-6.jpg",
   },
 ];
+
+export const organizationGroups = [
+  {
+    title: "Equipo Directivo",
+    members: [
+      { name: "Oscar Muñoz Yáñez", role: "Director" },
+      { name: "Claudio Calderón Ibarra", role: "Inspector General" },
+      { name: "Sandra Baeza Ramírez", role: "Inspectora General" },
+      { name: "Rosa María Santibañez Montero", role: "Jefa UTP" },
+      { name: "Madeleine Leiva Castro", role: "Orientadora" },
+      { name: "Por confirmar", role: "Encargada de Convivencia Escolar" },
+    ],
+  },
+  {
+    title: "Docentes",
+    members: [
+      { name: "Por confirmar", role: "Docente de Lenguaje" },
+      { name: "Por confirmar", role: "Docente de Matemática" },
+      { name: "Por confirmar", role: "Docente de Historia" },
+      { name: "Por confirmar", role: "Docente de Ciencias" },
+      { name: "Por confirmar", role: "Docente de Inglés" },
+      { name: "Por confirmar", role: "Docente de Educación Física" },
+      { name: "Por confirmar", role: "Docente de Artes" },
+    ],
+  },
+  {
+    title: "Docentes de Especialidad TP",
+    members: [
+      { name: "Por confirmar", role: "Docente Administración" },
+      { name: "Por confirmar", role: "Docente Enfermería" },
+      { name: "Por confirmar", role: "Docente Programación" },
+      { name: "Por confirmar", role: "Docente Turismo" },
+    ],
+  },
+  {
+    title: "Asistentes de la Educación",
+    members: [
+      { name: "Por confirmar", role: "Asistente de Aula" },
+      { name: "Por confirmar", role: "Asistente Administrativo" },
+      { name: "Por confirmar", role: "Auxiliar de Servicios" },
+    ],
+  },
+  {
+    title: "Equipo de Apoyo",
+    members: [
+      { name: "Por confirmar", role: "Psicólogo/a" },
+      { name: "Por confirmar", role: "Trabajador/a Social" },
+      { name: "Por confirmar", role: "Fonoaudiólogo/a" },
+    ],
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Por confirmar",
+    role: "Egresado/a Administración",
+    year: "2024",
+    quote:
+      "El Liceo Eduardo Charme me entregó las herramientas para ingresar al mundo laboral con confianza. La formación en administración y recursos humanos me abrió puertas que no imaginé.",
+  },
+  {
+    name: "Por confirmar",
+    role: "Egresado/a Programación",
+    year: "2023",
+    quote:
+      "Gracias a la especialidad de Programación descubrí mi vocación. Hoy estudio Ingeniería en Informática y todo partió en los laboratorios del liceo.",
+  },
+  {
+    name: "Por confirmar",
+    role: "Egresado/a Enfermería",
+    year: "2024",
+    quote:
+      "La práctica profesional en centros de salud fue una experiencia invaluable. El liceo me preparó no solo técnicamente, sino como persona comprometida con el cuidado de otros.",
+  },
+];
