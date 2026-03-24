@@ -38,7 +38,7 @@ export default function Partners() {
                 src={partner.logo}
                 alt={partner.name}
                 title={partner.name}
-                className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+                className="h-16 md:h-20 w-auto object-contain transition-all duration-300 hover:scale-105"
               />
             </div>
           ))}
