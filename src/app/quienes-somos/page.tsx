@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Card, { CardContent } from "@/components/ui/Card";
-import { sealItems, values, teamMembers, organizationGroups } from "@/lib/data";
+import { sealItems, values, organizationGroups } from "@/lib/data";
 
 const iconMap: Record<string, React.ElementType> = {
   Users,
@@ -234,79 +234,95 @@ export default function QuienesSomosPage() {
         </div>
       </Section>
 
-      {/* Equipo directivo */}
-      <Section
-        title="Equipo Directivo"
-        subtitle="Profesionales comprometidos con la educación de calidad"
-      >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.role}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <Card className="text-center">
-                <div className="pt-6 px-6">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mx-auto flex items-center justify-center">
-                    <Users size={32} className="text-primary/40" />
-                  </div>
-                </div>
-                <CardContent>
-                  <h3 className="font-bold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium">{member.role}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Organización completa */}
+      {/* Nuestra Comunidad Educativa - Meet the Team */}
       <Section
         title="Nuestra Comunidad Educativa"
-        subtitle="Todos los integrantes que hacen posible la labor educativa del liceo"
-        className="bg-gray-50"
+        subtitle="Conoce a las personas que hacen posible la labor educativa del liceo"
       >
-        <div className="max-w-5xl mx-auto space-y-10">
-          {organizationGroups.filter(g => g.title !== "Equipo Directivo").map((group, groupIndex) => (
-            <motion.div
-              key={group.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: groupIndex * 0.1 }}
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                <div className="w-1.5 h-6 rounded-full bg-primary" />
-                {group.title}
-              </h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {group.members.map((member, memberIndex) => (
-                  <div
-                    key={`${group.title}-${memberIndex}`}
-                    className="bg-white rounded-xl p-4 border border-gray-100 hover:border-primary/20 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                        <Users size={16} className="text-primary/50" />
-                      </div>
-                      <div className="min-w-0">
-                        <p className="font-medium text-gray-900 text-sm truncate">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {organizationGroups.map((group, groupIndex) => {
+            const groupColors = [
+              { bg: "from-primary to-secondary", accent: "bg-primary" },
+              { bg: "from-emerald-500 to-teal-500", accent: "bg-emerald-500" },
+              { bg: "from-amber-500 to-orange-500", accent: "bg-amber-500" },
+              { bg: "from-purple-500 to-indigo-500", accent: "bg-purple-500" },
+              { bg: "from-rose-500 to-pink-500", accent: "bg-rose-500" },
+            ];
+            const color = groupColors[groupIndex % groupColors.length];
+
+            return (
+              <motion.div
+                key={group.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: groupIndex * 0.1 }}
+              >
+                {/* Group header */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color.bg} flex items-center justify-center`}>
+                    <Users size={22} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900">{group.title}</h3>
+                    <p className="text-sm text-gray-500">{group.members.length} integrantes</p>
+                  </div>
+                </div>
+
+                {/* Members grid */}
+                <div className={`grid ${
+                  group.title === "Equipo Directivo"
+                    ? "sm:grid-cols-2 lg:grid-cols-3"
+                    : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+                } gap-5`}>
+                  {group.members.map((member, memberIndex) => {
+                    const initials = member.name === "Por confirmar"
+                      ? "?"
+                      : member.name.split(" ").map(n => n[0]).slice(0, 2).join("");
+
+                    return (
+                      <motion.div
+                        key={`${group.title}-${memberIndex}`}
+                        initial={{ opacity: 0, y: 15 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: memberIndex * 0.05 }}
+                        className={`group text-center ${
+                          group.title === "Equipo Directivo" ? "p-6" : "p-4"
+                        } rounded-2xl bg-white border border-gray-100 hover:border-transparent hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-default`}
+                      >
+                        {/* Avatar */}
+                        <div className={`${
+                          group.title === "Equipo Directivo" ? "w-28 h-28" : "w-20 h-20"
+                        } rounded-full bg-gradient-to-br ${color.bg} mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                          <span className={`${
+                            group.title === "Equipo Directivo" ? "text-2xl" : "text-lg"
+                          } font-bold text-white`}>
+                            {initials}
+                          </span>
+                        </div>
+
+                        {/* Info */}
+                        <h4 className={`${
+                          group.title === "Equipo Directivo" ? "text-base" : "text-sm"
+                        } font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors`}>
                           {member.name}
-                        </p>
-                        <p className="text-xs text-gray-500 truncate">
+                        </h4>
+                        <p className={`${
+                          group.title === "Equipo Directivo" ? "text-sm" : "text-xs"
+                        } text-gray-500 font-medium`}>
                           {member.role}
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+
+                        {/* Hover detail line */}
+                        <div className={`h-0.5 ${color.accent} mx-auto mt-3 w-0 group-hover:w-12 transition-all duration-300 rounded-full`} />
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </Section>
     </>
