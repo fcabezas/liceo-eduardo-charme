@@ -85,3 +85,21 @@
 .lightbox-overlay {
   @apply fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm;
 }
+
+/* Infinite scroll carousel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
