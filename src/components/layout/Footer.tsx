@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/favicon-32x32.png"
+                src="/images/logo.jpeg"
                 alt="Logo Liceo Eduardo Charme"
                 width={40}
                 height={40}

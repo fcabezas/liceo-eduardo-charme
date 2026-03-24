@@ -87,7 +87,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image
-                src="/favicon-32x32.png"
+                src="/images/logo.jpeg"
                 alt="Logo Liceo Eduardo Charme"
                 width={48}
                 height={48}
