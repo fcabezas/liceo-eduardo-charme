@@ -520,11 +520,29 @@ export const organizationGroups = [
     ],
   },
   {
-    title: "Equipo de Apoyo",
+    title: "Programa de Integración Escolar",
     members: [
       { name: "Por confirmar", role: "Psicólogo/a" },
       { name: "Por confirmar", role: "Trabajador/a Social" },
       { name: "Por confirmar", role: "Fonoaudiólogo/a" },
+    ],
+  },
+  {
+    title: "Auxiliares",
+    members: [
+      { name: "Por confirmar", role: "Auxiliar" },
+    ],
+  },
+  {
+    title: "Internado",
+    members: [
+      { name: "Por confirmar", role: "Encargado/a Internado" },
+    ],
+  },
+  {
+    title: "Programa de Alimentación Escolar",
+    members: [
+      { name: "Por confirmar", role: "Encargado/a PAE" },
     ],
   },
 ];
