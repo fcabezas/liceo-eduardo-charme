@@ -173,7 +173,7 @@ export default function AdmisionPage() {
               WhatsApp
             </a>
             <a
-              href="mailto:ledocharme@yahoo.es?subject=Consulta%20Admisión%20Liceo%20Eduardo%20Charme"
+              href="mailto:contacto@liceoeduardocharme.cl?subject=Consulta%20Admisión%20Liceo%20Eduardo%20Charme"
               className="flex items-center justify-center gap-3 p-5 bg-primary/5 border-2 border-primary/20 rounded-2xl hover:bg-primary/10 transition-all font-semibold text-gray-900"
             >
               <Mail size={22} className="text-primary" />

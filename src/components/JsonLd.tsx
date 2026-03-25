@@ -11,7 +11,7 @@ export default function JsonLd() {
       "Liceo de Educación Media Técnico Profesional en San Fernando, Región de O'Higgins, Chile. 121 años formando profesionales con excelencia humana y académica. Especialidades en Administración, Enfermería, Programación y Turismo.",
     foundingDate: "1905",
     telephone: "+56958137970",
-    email: "ledocharme@yahoo.es",
+    email: "contacto@liceoeduardocharme.cl",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Argomedo 485",

@@ -6,7 +6,7 @@ export const siteConfig = {
   address: "Argomedo 485, San Fernando, Región de O'Higgins, Chile",
   phone: "+56 9 5813 7970",
   phone2: "+56 9 8838 8822",
-  email: "ledocharme@yahoo.es",
+  email: "contacto@liceoeduardocharme.cl",
   rbd: "2448-1",
   director: "Oscar Muñoz Yáñez",
   founded: 1905,
