@@ -449,32 +449,32 @@ export const teamMembers = [
   {
     name: "Oscar Muñoz Yáñez",
     role: "Director",
-    image: "/images/placeholder-team-1.jpg",
+    image: "/images/team/director.jpg",
   },
   {
     name: "Claudio Calderón Ibarra",
     role: "Inspector General",
-    image: "/images/placeholder-team-2.jpg",
+    image: "/images/team/inspector-general.jpg",
   },
   {
     name: "Sandra Baeza Ramírez",
     role: "Inspectora General",
-    image: "/images/placeholder-team-3.jpg",
+    image: "/images/team/inspectora-general.jpg",
   },
   {
     name: "Rosa María Santibañez Montero",
     role: "Jefa UTP",
-    image: "/images/placeholder-team-4.jpg",
+    image: "/images/team/jefa-utp.jpg",
   },
   {
     name: "Madeleine Leiva Castro",
     role: "Orientadora",
-    image: "/images/placeholder-team-5.jpg",
+    image: "/images/team/orientadora.jpg",
   },
   {
     name: "Por confirmar",
-    role: "Encargada de Convivencia Escolar",
-    image: "/images/placeholder-team-6.jpg",
+    role: "Coordinadora PIE",
+    image: "/images/team/coordinadora-pie.jpg",
   },
 ];
 
@@ -482,12 +482,12 @@ export const organizationGroups = [
   {
     title: "Equipo Directivo",
     members: [
-      { name: "Oscar Muñoz Yáñez", role: "Director" },
-      { name: "Claudio Calderón Ibarra", role: "Inspector General" },
-      { name: "Sandra Baeza Ramírez", role: "Inspectora General" },
-      { name: "Rosa María Santibañez Montero", role: "Jefa UTP" },
-      { name: "Madeleine Leiva Castro", role: "Orientadora" },
-      { name: "Por confirmar", role: "Encargada de Convivencia Escolar" },
+      { name: "Oscar Muñoz Yáñez", role: "Director", image: "/images/team/director.jpg" },
+      { name: "Claudio Calderón Ibarra", role: "Inspector General", image: "/images/team/inspector-general.jpg" },
+      { name: "Sandra Baeza Ramírez", role: "Inspectora General", image: "/images/team/inspectora-general.jpg" },
+      { name: "Rosa María Santibañez Montero", role: "Jefa UTP", image: "/images/team/jefa-utp.jpg" },
+      { name: "Madeleine Leiva Castro", role: "Orientadora", image: "/images/team/orientadora.jpg" },
+      { name: "Por confirmar", role: "Coordinadora PIE", image: "/images/team/coordinadora-pie.jpg" },
     ],
   },
   {

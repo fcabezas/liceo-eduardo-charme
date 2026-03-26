@@ -276,6 +276,8 @@ export default function QuienesSomosPage() {
                     : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
                 } gap-5`}>
                   {group.members.map((member, memberIndex) => {
+                    const hasImage = "image" in member && (member as { image?: string }).image;
+                    const memberImage = (member as { image?: string }).image;
                     const initials = member.name === "Por confirmar"
                       ? "?"
                       : member.name.split(" ").map(n => n[0]).slice(0, 2).join("");
@@ -294,12 +296,22 @@ export default function QuienesSomosPage() {
                         {/* Avatar */}
                         <div className={`${
                           group.title === "Equipo Directivo" ? "w-28 h-28" : "w-20 h-20"
-                        } rounded-full bg-gradient-to-br ${color.bg} mx-auto flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                          <span className={`${
-                            group.title === "Equipo Directivo" ? "text-2xl" : "text-lg"
-                          } font-bold text-white`}>
-                            {initials}
-                          </span>
+                        } rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden ${
+                          hasImage ? "" : `bg-gradient-to-br ${color.bg} flex items-center justify-center`
+                        }`}>
+                          {hasImage ? (
+                            <img
+                              src={memberImage}
+                              alt={member.name}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <span className={`${
+                              group.title === "Equipo Directivo" ? "text-2xl" : "text-lg"
+                            } font-bold text-white`}>
+                              {initials}
+                            </span>
+                          )}
                         </div>
 
                         {/* Info */}
