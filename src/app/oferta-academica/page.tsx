@@ -151,6 +151,10 @@ export default function OfertaAcademicaPage() {
                   <span className="font-medium text-gray-700">Segundo bloque</span>
                   <span className="text-gray-600">09:45 - 11:15</span>
                 </div>
+                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                  <span className="font-medium text-gray-700">Tercer bloque</span>
+                  <span className="text-gray-600">11:30 - 13:00</span>
+                </div>
                 <div className="flex items-center justify-between p-4 bg-gold/10 rounded-xl">
                   <span className="font-medium text-gray-700">Almuerzo</span>
                   <span className="text-gray-600">13:00 - 13:45</span>
