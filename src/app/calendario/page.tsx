@@ -2,11 +2,13 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Calendar, MapPin, Clock } from "lucide-react";
+import { ChevronLeft, ChevronRight, Calendar, Bell } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Card, { CardContent } from "@/components/ui/Card";
 import { calendarEvents } from "@/lib/data";
 import { cn, formatDate } from "@/lib/utils";
+
+const GOOGLE_CALENDAR_ID = "c_7db55ac26706f107e6535a081c795fec66a05c856226ea3a94b150829d070bff@group.calendar.google.com";
 
 const eventTypeColors: Record<string, { bg: string; text: string; dot: string }> = {
   academic: { bg: "bg-blue-50", text: "text-blue-700", dot: "bg-blue-500" },
@@ -85,10 +87,30 @@ export default function CalendarioPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Calendario de Eventos
             </h1>
-            <p className="text-lg text-blue-200 max-w-2xl">
+            <p className="text-lg text-blue-200 max-w-2xl mb-6">
               Fechas importantes, actividades académicas, deportivas, culturales
               y más.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(GOOGLE_CALENDAR_ID)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-primary font-semibold rounded-full hover:bg-gold hover:text-white transition-all duration-300"
+              >
+                <Bell size={18} />
+                Suscribirme al calendario
+              </a>
+              <a
+                href={`https://calendar.google.com/calendar/embed?src=${encodeURIComponent(GOOGLE_CALENDAR_ID)}&ctz=America/Santiago`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+              >
+                <Calendar size={18} />
+                Ver en Google Calendar
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -272,6 +294,40 @@ export default function CalendarioPage() {
                 No hay eventos programados para este mes.
               </p>
             )}
+          </div>
+        </div>
+      </Section>
+
+      {/* Google Calendar embed */}
+      <Section
+        title="Calendario Institucional en línea"
+        subtitle="Los eventos se actualizan automáticamente. Suscríbete para recibirlos en tu Google Calendar."
+        className="bg-gray-50"
+      >
+        <div className="max-w-5xl mx-auto">
+          <Card>
+            <CardContent className="p-2 md:p-4">
+              <iframe
+                src={`https://calendar.google.com/calendar/embed?src=${encodeURIComponent(GOOGLE_CALENDAR_ID)}&ctz=America/Santiago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&mode=MONTH&hl=es`}
+                className="w-full rounded-lg"
+                style={{ height: "600px", border: 0 }}
+                title="Calendario Liceo Eduardo Charme"
+              />
+            </CardContent>
+          </Card>
+          <div className="text-center mt-6">
+            <a
+              href={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(GOOGLE_CALENDAR_ID)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary gap-2"
+            >
+              <Bell size={18} />
+              Suscribirme y recibir notificaciones
+            </a>
+            <p className="text-sm text-gray-500 mt-3">
+              Al suscribirte, los eventos del liceo aparecerán automáticamente en tu calendario personal con notificaciones.
+            </p>
           </div>
         </div>
       </Section>
