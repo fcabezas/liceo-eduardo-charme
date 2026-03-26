@@ -476,6 +476,11 @@ export const teamMembers = [
     role: "Coordinadora PIE",
     image: "/images/team/coordinadora-pie.jpg",
   },
+  {
+    name: "Sandra Rodríguez Hernández",
+    role: "Coordinadora Técnico Profesional",
+    image: "/images/team/coordinadora-tp.jpg",
+  },
 ];
 
 export const organizationGroups = [
@@ -488,6 +493,7 @@ export const organizationGroups = [
       { name: "Rosa María Santibañez Montero", role: "Jefa UTP", image: "/images/team/jefa-utp.jpg" },
       { name: "Madeleine Leiva Castro", role: "Orientadora", image: "/images/team/orientadora.jpg" },
       { name: "Por confirmar", role: "Coordinadora PIE", image: "/images/team/coordinadora-pie.jpg" },
+      { name: "Sandra Rodríguez Hernández", role: "Coordinadora Técnico Profesional", image: "/images/team/coordinadora-tp.jpg" },
     ],
   },
   {
