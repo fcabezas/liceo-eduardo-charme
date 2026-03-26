@@ -472,7 +472,7 @@ export const teamMembers = [
     image: "/images/team/orientadora.jpg",
   },
   {
-    name: "Por confirmar",
+    name: "Karina Vásquez Navarro",
     role: "Coordinadora PIE",
     image: "/images/team/coordinadora-pie.jpg",
   },
