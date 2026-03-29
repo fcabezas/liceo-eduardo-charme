@@ -22,6 +22,7 @@ export const navLinks = [
   { href: "/especialidades", label: "Especialidades" },
   { href: "/oferta-academica", label: "Oferta Académica" },
   { href: "/noticias", label: "Noticias" },
+  { href: "/evaluaciones", label: "Evaluaciones" },
   { href: "/admision", label: "Admisión" },
   { href: "/contacto", label: "Contacto" },
 ];
