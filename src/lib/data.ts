@@ -347,6 +347,13 @@ export const calendarEvents = [
     type: "academic",
     description: "Presentación de las especialidades técnico profesionales.",
   },
+  {
+    id: 11,
+    title: "Reunión de Profesores Jefes",
+    date: "2026-03-31",
+    type: "meeting",
+    description: "Reunión de profesores jefes a las 16:15 hrs.",
+  },
 ];
 
 export const galleryImages = [
