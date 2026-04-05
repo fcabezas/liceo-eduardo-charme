@@ -312,6 +312,7 @@ export default function CalendarioPage() {
                 className="w-full rounded-lg"
                 style={{ height: "600px", border: 0 }}
                 title="Calendario Liceo Eduardo Charme"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
               />
             </CardContent>
           </Card>

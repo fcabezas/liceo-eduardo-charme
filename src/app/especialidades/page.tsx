@@ -19,6 +19,7 @@ const specialtyImages: Record<string, string> = {
   administracion: "/images/adm.jpg",
   enfermeria: "/images/enf.jpg",
   programacion: "/images/prg.jpg",
+  turismo: "/images/turismo.jpg",
 };
 
 const iconMap: Record<string, React.ElementType> = {

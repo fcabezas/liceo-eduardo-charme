@@ -81,19 +81,28 @@ export default function NoticiaDetailPage() {
                   {news.excerpt}
                 </p>
               </div>
-              {news.youtube && (
-                <div className="mt-8">
-                  <div className="relative aspect-video rounded-2xl overflow-hidden">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${news.youtube.split("v=")[1]?.split("&")[0]}`}
-                      title={news.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
+              {news.youtube && (() => {
+                let videoId: string | null = null;
+                try {
+                  const url = new URL(news.youtube);
+                  videoId = url.searchParams.get("v");
+                } catch { /* ignore invalid URLs */ }
+                if (!videoId || !/^[a-zA-Z0-9_-]{11}$/.test(videoId)) return null;
+                return (
+                  <div className="mt-8">
+                    <div className="relative aspect-video rounded-2xl overflow-hidden">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${videoId}`}
+                        title={news.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
                   </div>
-                </div>
-              )}
+                );
+              })()}
             </div>
 
             <div className="lg:col-span-1">
