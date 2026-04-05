@@ -7,6 +7,7 @@ import {
   Handshake,
   GraduationCap,
   Lightbulb,
+  Leaf,
   Heart,
   Shield,
   Star,
@@ -21,6 +22,7 @@ const iconMap: Record<string, React.ElementType> = {
   Handshake,
   GraduationCap,
   Lightbulb,
+  Leaf,
 };
 
 const timelineEvents = [

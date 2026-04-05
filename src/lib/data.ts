@@ -115,9 +115,9 @@ export const specialties = [
 
 export const sealItems = [
   {
-    title: "Inclusión",
+    title: "Respeto a las Diversidades",
     description:
-      "Eliminar todas las formas de discriminación arbitraria que impidan el aprendizaje y la participación de los estudiantes.",
+      "El Liceo valora y respeta las diferencias individuales en términos de género, origen étnico, orientación sexual, habilidades, entre otros aspectos. Se promueve la creación de un entorno inclusivo donde todas las personas se sientan aceptadas y valoradas.",
     icon: "Users",
   },
   {
@@ -137,6 +137,12 @@ export const sealItems = [
     description:
       "Promover la innovación pedagógica y el trabajo colaborativo orientado a nuevas competencias.",
     icon: "Lightbulb",
+  },
+  {
+    title: "Conciencia Ambientalista",
+    description:
+      "El Liceo promueve la educación ambiental, conciencia ambiental, conocimiento ecológico, actitudes y valores hacia el medio ambiente para tomar un compromiso de acciones y responsabilidades que tengan por fin el uso racional de los recursos y poder lograr así un desarrollo adecuado y sostenible.",
+    icon: "Leaf",
   },
 ];
 
