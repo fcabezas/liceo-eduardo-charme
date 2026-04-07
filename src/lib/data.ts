@@ -263,6 +263,22 @@ export const newsItems = [
       "/images/turismo-museo/006.jpeg",
     ],
   },
+  {
+    id: 8,
+    title: "Liceo Eduardo Charme y Municipalidad de San Fernando firman compromisos por una Educación Pública de Calidad",
+    excerpt:
+      "El Liceo Eduardo Charme dio un paso concreto hacia el fortalecimiento de la educación pública en San Fernando: el director Oscar Miguel Ángel Muñoz Yáñez y el equipo directivo del establecimiento se reunieron con el Alcalde de la comuna, Pablo Silva Pérez, y su equipo municipal, para establecer compromisos formales en el marco del Convenio de Colaboración entre ambas instituciones.\n\nEl convenio contempla acciones directas en beneficio de los estudiantes del liceo, entre ellas: habilitación de Centros de Práctica para las especialidades Técnico Profesionales, Salidas Pedagógicas a espacios y recursos comunales, realización de Charlas y Talleres con profesionales municipales, apoyo en la mantención de áreas verdes del establecimiento, y reforzamiento de la seguridad de los estudiantes al término de la jornada escolar.\n\nEl director del liceo valoró la excelente disposición del Alcalde Silva Pérez para comprometer recursos materiales y humanos en la implementación del Proyecto Educativo Institucional: \"Este convenio nos permite garantizar más y mejores oportunidades para todos nuestros estudiantes, con especial atención en aquellos que provienen de los sectores más vulnerables de la comuna\".\n\nEsta alianza estratégica entre el Liceo Eduardo Charme y la Municipalidad de San Fernando reafirma que la educación pública de calidad se construye en red, articulando el trabajo escolar con los recursos y el compromiso del territorio.",
+    category: "Institucional",
+    date: "2026-04-07",
+    image: "/images/muni/001.jpg",
+    gallery: [
+      "/images/muni/001.jpg",
+      "/images/muni/002.jpg",
+      "/images/muni/003.jpg",
+      "/images/muni/004.jpg",
+      "/images/muni/005.jpg",
+    ],
+  },
 ];
 
 export const documents = [
