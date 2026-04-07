@@ -1,10 +1,11 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Calendar, ArrowLeft, Tag } from "lucide-react";
+import { Calendar, ArrowLeft, Tag, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Section from "@/components/ui/Section";
 import { newsItems } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
@@ -13,6 +14,9 @@ export default function NoticiaDetailPage() {
   const params = useParams();
   const id = Number(params.id);
   const news = newsItems.find((n) => n.id === id);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const gallery = (news as { gallery?: string[] })?.gallery;
 
   if (!news) {
     return (
@@ -105,6 +109,27 @@ export default function NoticiaDetailPage() {
               })()}
             </div>
 
+            {gallery && gallery.length > 0 && (
+              <div className="lg:col-span-3 mt-12">
+                <h2 className="text-xl font-bold text-gray-900 mb-6">Galería de fotos</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  {gallery.map((src, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setLightboxIndex(i)}
+                      className="relative aspect-square rounded-xl overflow-hidden group focus:outline-none focus:ring-2 focus:ring-primary"
+                    >
+                      <img
+                        src={src}
+                        alt={`${news.title} — foto ${i + 1}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="lg:col-span-1">
               <h3 className="font-bold text-gray-900 mb-4">Otras noticias</h3>
               <div className="space-y-4">
@@ -131,6 +156,43 @@ export default function NoticiaDetailPage() {
           </div>
         </div>
       </Section>
+      {gallery && lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          onClick={() => setLightboxIndex(null)}
+        >
+          <button
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-4 right-4 text-white p-2 rounded-full hover:bg-white/10"
+            aria-label="Cerrar"
+          >
+            <X size={28} />
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightboxIndex((lightboxIndex - 1 + gallery.length) % gallery.length); }}
+            className="absolute left-4 text-white p-2 rounded-full hover:bg-white/10"
+            aria-label="Anterior"
+          >
+            <ChevronLeft size={36} />
+          </button>
+          <img
+            src={gallery[lightboxIndex]}
+            alt={`${news.title} — foto ${lightboxIndex + 1}`}
+            className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            onClick={(e) => { e.stopPropagation(); setLightboxIndex((lightboxIndex + 1) % gallery.length); }}
+            className="absolute right-4 text-white p-2 rounded-full hover:bg-white/10"
+            aria-label="Siguiente"
+          >
+            <ChevronRight size={36} />
+          </button>
+          <span className="absolute bottom-4 text-white/60 text-sm">
+            {lightboxIndex + 1} / {gallery.length}
+          </span>
+        </div>
+      )}
     </>
   );
 }

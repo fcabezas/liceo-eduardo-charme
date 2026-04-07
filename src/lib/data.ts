@@ -216,6 +216,36 @@ export const newsItems = [
     date: "2026-03-17",
     image: "/images/noticia-reunion-apoderados.jpg",
   },
+  {
+    id: 6,
+    title: "Liceo Eduardo Charme marcha por el Día Mundial de la Concienciación sobre el Autismo en San Fernando",
+    excerpt:
+      "El 2 de abril, Día Mundial de la Concienciación sobre el Autismo, el Liceo Eduardo Charme demostró que la inclusión es acción: 120 estudiantes y el equipo completo del Programa de Integración Escolar (PIE), liderado por la coordinadora Karina Vásquez Navarro, participaron en una caminata organizada por la Fundación Autismo San Fernando con el objetivo de visibilizar y promover la comprensión y el respeto hacia las personas con Trastorno del Espectro Autista (TEA).\n\nLa actividad recorrió las calles de San Fernando como un gesto colectivo de empatía y compromiso. El director del establecimiento, profesor Oscar Miguel Ángel Muñoz Yáñez, felicitó a la Fundación Autismo San Fernando por el éxito de la jornada y destacó la participación activa de los estudiantes del liceo: \"Una comunidad que avanza unida, donde cada persona importa, se fortalece en el respeto y la empatía, garantizando no solo desde el discurso, sino con acciones concretas, los derechos de los niños, niñas y adolescentes neurodivergentes\".\n\nEsta iniciativa forma parte del sello educativo de Respeto a las Diversidades del Liceo Eduardo Charme, que trabaja permanentemente para construir un entorno escolar inclusivo donde cada estudiante, independientemente de sus características y necesidades, se sienta aceptado, valorado y protagonista de su propio aprendizaje. El Programa de Integración Escolar (PIE) del liceo acompaña cotidianamente a estudiantes con necesidades educativas especiales, articulando apoyos especializados con la comunidad escolar.\n\nDesde el Liceo Eduardo Charme reafirmamos: la inclusión no es una palabra, es una construcción diaria.",
+    category: "Inclusión",
+    date: "2026-04-02",
+    image: "/images/tea/001.jpeg",
+    gallery: [
+      "/images/tea/001.jpeg",
+      "/images/tea/002.jpeg",
+      "/images/tea/003.jpeg",
+      "/images/tea/004.jpeg",
+      "/images/tea/005.jpeg",
+      "/images/tea/006.jpeg",
+      "/images/tea/007.jpeg",
+      "/images/tea/008.jpeg",
+      "/images/tea/009.jpeg",
+      "/images/tea/010.jpeg",
+      "/images/tea/011.jpeg",
+      "/images/tea/012.jpeg",
+      "/images/tea/013.jpeg",
+      "/images/tea/014.jpeg",
+      "/images/tea/015.jpeg",
+      "/images/tea/016.jpeg",
+      "/images/tea/017.jpeg",
+      "/images/tea/018.jpeg",
+      "/images/tea/019.jpeg",
+    ],
+  },
 ];
 
 export const documents = [
