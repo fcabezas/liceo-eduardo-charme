@@ -246,6 +246,23 @@ export const newsItems = [
       "/images/tea/019.jpeg",
     ],
   },
+  {
+    id: 7,
+    title: "Estudiantes de Turismo del Liceo Eduardo Charme visitan el Museo Lircunlauta en San Fernando",
+    excerpt:
+      "La formación técnica profesional va más allá del aula: estudiantes de la Especialidad de Servicios de Turismo del Liceo Eduardo Charme realizaron una visita guiada al Museo Lircunlauta, uno de los principales referentes del patrimonio cultural e histórico de la comuna de San Fernando.\n\nLa actividad, enmarcada en el plan formativo de la especialidad, fue coordinada por los profesores Francisco Lillo y José Iván Aliaga, quienes acompañaron a los estudiantes durante el recorrido. El Museo Lircunlauta ofrece una mirada profunda a la historia, tradiciones y cultura de la región, constituyendo un espacio de aprendizaje invaluable para quienes se forman como técnicos en turismo y servicios.\n\nEl Liceo Eduardo Charme agradece al equipo del Museo Lircunlauta y a la Ilustre Municipalidad de San Fernando por las facilidades otorgadas para llevar a cabo esta experiencia formativa. Iniciativas como esta son fundamentales para que nuestros estudiantes desarrollen competencias prácticas en terreno, conozcan el patrimonio local y comprendan el potencial turístico de San Fernando y la Región de O'Higgins.\n\nLa Especialidad de Servicios de Turismo del Liceo Eduardo Charme es la única de su tipo en la provincia de Colchagua, preparando técnicos de nivel medio con las habilidades que demanda la industria turística nacional.",
+    category: "Académico",
+    date: "2026-04-02",
+    image: "/images/turismo-museo/001.jpeg",
+    gallery: [
+      "/images/turismo-museo/001.jpeg",
+      "/images/turismo-museo/002.jpeg",
+      "/images/turismo-museo/003.jpeg",
+      "/images/turismo-museo/004.jpeg",
+      "/images/turismo-museo/005.jpeg",
+      "/images/turismo-museo/006.jpeg",
+    ],
+  },
 ];
 
 export const documents = [
