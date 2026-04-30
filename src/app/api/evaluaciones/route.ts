@@ -18,19 +18,33 @@ function isAllowedRedirect(location: string): boolean {
   }
 }
 
-async function fetchFollowingRedirects(url: string, maxRedirects = 3): Promise<Response> {
+async function fetchFollowingRedirects(url: string, maxRedirects = 5): Promise<Response> {
   let currentUrl = url;
   for (let i = 0; i < maxRedirects; i++) {
-    const res = await fetch(currentUrl, { redirect: "manual" });
+    const res = await fetch(currentUrl, { 
+      redirect: "manual",
+      headers: {
+        'User-Agent': 'Mozilla/5.0',
+        'Accept': 'application/json, text/plain, */*'
+      }
+    });
     if (res.status >= 300 && res.status < 400) {
       const location = res.headers.get("location");
-      if (!location || !isAllowedRedirect(location)) break;
+      if (!location) break;
+      if (!isAllowedRedirect(location)) break;
       currentUrl = location;
       continue;
     }
     return res;
   }
-  return fetch(currentUrl);
+  // Último intento con redirect automático
+  return fetch(currentUrl, {
+    redirect: "follow",
+    headers: {
+      'User-Agent': 'Mozilla/5.0',
+      'Accept': 'application/json, text/plain, */*'
+    }
+  });
 }
 
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
